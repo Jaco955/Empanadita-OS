@@ -65,7 +65,7 @@ var foofightersScreen = document.querySelector("#foo-fighters")
 var clickythingsScreen = document.querySelector("#clicky-things")
 
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "block"
 }
 function closeWindow(element) {
   element.style.display = "none"
@@ -100,3 +100,5 @@ clickythingsScreenOpen.addEventListener("click", function() {
 clickythingsScreenClose.addEventListener("click", function() {
   closeWindow(clickythingsScreen);
 });
+
+var selectedIcon = undefined
