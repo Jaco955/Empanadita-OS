@@ -62,7 +62,7 @@ dragElement(document.getElementById("rawr"));
 
 var welcomeScreen = document.querySelector("#welcome")
 var foofightersScreen = document.querySelector("#foo-fighters")
-var clickyScreen = document.querySelector("#clicky-things")
+var clickythingsScreen = document.querySelector("#clicky-things")
 
 function openWindow(element) {
   element.style.display = "flex"
@@ -89,4 +89,14 @@ foofightersScreenOpen.addEventListener("click", function() {
 });
 foofightersScreenClose.addEventListener("click", function() {
   closeWindow(foofightersScreen);
+});
+
+var clickythingsScreenOpen = document.querySelector("#welcomeopen")
+var clickythingsScreenClose = document.querySelector("#clicky-thingsclose")
+
+clickythingsScreenOpen.addEventListener("click", function() {
+  openWindow(clickythingsScreen);
+});
+clickythingsScreenClose.addEventListener("click", function() {
+  closeWindow(clickythingsScreen);
 });
