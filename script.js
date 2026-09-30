@@ -71,7 +71,7 @@ function closeWindow(element) {
   element.style.display = "none"
 }
 
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
+var welcomeScreenOpen = document.querySelector("#desktopApps1")
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 
 welcomeScreenOpen.addEventListener("click", function() {
@@ -81,7 +81,7 @@ welcomeScreenClose.addEventListener("click", function() {
   closeWindow(welcomeScreen);
 });
 
-var foofightersScreenOpen = document.querySelector("#welcomeopen")
+var foofightersScreenOpen = document.querySelector("#desktopApps2")
 var foofightersScreenClose = document.querySelector("#foo-fightersclose")
 
 foofightersScreenOpen.addEventListener("click", function() {
@@ -91,7 +91,7 @@ foofightersScreenClose.addEventListener("click", function() {
   closeWindow(foofightersScreen);
 });
 
-var clickythingsScreenOpen = document.querySelector("#welcomeopen")
+var clickythingsScreenOpen = document.querySelector("#desktopApps3")
 var clickythingsScreenClose = document.querySelector("#clicky-thingsclose")
 
 clickythingsScreenOpen.addEventListener("click", function() {
@@ -102,3 +102,36 @@ clickythingsScreenClose.addEventListener("click", function() {
 });
 
 var selectedIcon = undefined
+
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+} 
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined
+}
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element)
+    openWindow(window)
+  } else {
+    selectIcon(element)
+  }
+}
+var biggestIndex = 1;
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+)
+}
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+}
+
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  }

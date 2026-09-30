@@ -1,11 +1,14 @@
 #welcome{
     background-color: rgba(241, 201, 66, 0.808);
+    display: none;
 }
 #foo-fighters{
     background-color: rgba(241, 201, 66, 0.808);
+    display: none;
 }
 #clicky-things{
     background-color: rgba(241, 201, 66, 0.808);
+    display: none;
 }
 
 .general{
@@ -50,7 +53,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
-    display:flex;
+    display:none;
+    align-items: flex-end;
     justify-content: space-around
 }
 .clock{
@@ -126,16 +130,15 @@
     background-color:rgb(221, 20, 188)
 }
 
-.apps{
-    padding-top: 64px;
-    padding-left: 16px
-}
-
 .app1{
-    text-align: center;
+    font-size: 14px;
+    text-align: left;
     padding: 16px;
     width: fit-content;
-    color: rgba(241, 201, 66, 0.808)
+    color: rgba(241, 201, 66, 0.808);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around
 }
 
 .app1 img{
@@ -143,4 +146,44 @@
 }
 .app1 p{
     color: rgba(241, 201, 66, 0.808);
+}
+.app2{
+    font-size: 14px;
+    text-align: left;
+    padding: 16px;
+    width: fit-content;
+    color: rgba(241, 201, 66, 0.808);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.app2 img{
+    width: 64px; height: 64px; border-radius: 16px;
+}
+.app2 p{
+    color: rgba(241, 201, 66, 0.808);
+}
+.app3{
+    font-size: 14px;
+    text-align: left;
+    padding: 16px;
+    width: fit-content;
+    color: rgba(241, 201, 66, 0.808);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.app3 img{
+    width: 64px; height: 64px; border-radius: 16px;
+}
+.app3 p{
+    color: rgba(241, 201, 66, 0.808);
+}
+
+.selected{
+    border-radius: 20px;
+    padding: 12px;
+    color:darkcyan
 }
