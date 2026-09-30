@@ -58,14 +58,14 @@ function dragElement(element) {
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("foo-fighters"));
 dragElement(document.getElementById("clicky-things"));
-dragElement(document.getElementById("rawr"));
+
 
 var welcomeScreen = document.querySelector("#welcome")
 var foofightersScreen = document.querySelector("#foo-fighters")
 var clickythingsScreen = document.querySelector("#clicky-things")
 
 function openWindow(element) {
-  element.style.display = "block"
+  element.style.display = "flex"
 }
 function closeWindow(element) {
   element.style.display = "none"
@@ -131,7 +131,23 @@ function handleWindowTap(element) {
 }
 
 function openWindow(element) {
-  element.style.display = "flex";
+  element.style.display = "block";
   biggestIndex++;
   element.style.zIndex = biggestIndex;
   }
+
+  var topBar = document.querySelector("#rawr")
+
+function openWindow(element) {
+  element.style.display = "block";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon)
+}

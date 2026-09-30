@@ -46,26 +46,30 @@
 .rawwrr{
     border:solid black;
     border-radius:32px;
-    padding: 16px;
-    position: absolute;
-    width: 70%;
+    padding: 2px 12px;
+    position: fixed;
+    top:0%;
+    left:0%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index:9999;
     background-image: url(./image.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom;
-    display:none;
+    background-position: center;
+    display:flex;
     align-items: flex-end;
     justify-content: space-around
 }
 .clock{
     color:black;
     margin-right: 20px;
-    padding: 12px
+    padding: 2px 12px
 }
 .yo{
     color:black;
     margin-left: 20px;
-    padding: 12px;
+    padding: 2px 12px;
     cursor: pointer
 }
 .title{
@@ -135,7 +139,7 @@
     text-align: left;
     padding: 16px;
     width: fit-content;
-    color: rgba(241, 201, 66, 0.808);
+    color: rgba(241, 186, 66, 0.808);
     display:flex;
     flex-direction: column;
     justify-content: space-around
@@ -145,7 +149,7 @@
     width: 64px; height: 64px; border-radius: 16px;
 }
 .app1 p{
-    color: rgba(241, 201, 66, 0.808);
+    color: rgba(0, 0, 0, 0.808);
 }
 .app2{
     font-size: 14px;
@@ -162,7 +166,7 @@
     width: 64px; height: 64px; border-radius: 16px;
 }
 .app2 p{
-    color: rgba(241, 201, 66, 0.808);
+    color: rgba(0, 0, 0, 0.808);
 }
 .app3{
     font-size: 14px;
@@ -179,11 +183,26 @@
     width: 64px; height: 64px; border-radius: 16px;
 }
 .app3 p{
-    color: rgba(241, 201, 66, 0.808);
+    color: rgba(0, 0, 0, 0.808);
 }
 
 .selected{
     border-radius: 20px;
     padding: 12px;
-    color:darkcyan
+    color:darkcyan;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.selected:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#desktopApps1 {
+    margin-top: 80px;
+}
+
+#desktopApps1, #desktopApps2, #desktopApps3 {
+    display: inline-block; 
+    vertical-align: left;
+    margin-right: 15px;
 }
