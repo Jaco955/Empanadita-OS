@@ -3,6 +3,7 @@
 This project was made following completely the Stardance tutorial.
 
 Functions:
+
 1.Introduction app about me
 
 2.Fun facts app, including how i got into Hack Club, how I got my nickname and some more!!
