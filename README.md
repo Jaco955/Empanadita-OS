@@ -1,4 +1,4 @@
-# My own web-OS
+# My own Empanadita-OS
 
 This project was made following completely the Stardance tutorial.
 
